@@ -21,9 +21,11 @@ module.exports = {
      },
     
      createEvent:  async (args, req) => {
+       // console.log(req.body)
         if (!req.isAuth) {
             throw new Error('Unauthenticated!');
         }
+       
       try {
           const id = "5d6f9e298e63651e50b71498";
           const  event = new Event({

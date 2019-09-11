@@ -43,6 +43,7 @@ type RootQuery{
     events : [Event!]!
     users: [User!]!
     bookings: [Booking!]!
+    loggin(email: String!, password: String!): AuthData!
     
 }
 
@@ -51,7 +52,7 @@ type RootMutation {
     createUser (userInput: UserInput ): User
     bookEvent (eventId: ID!):Booking!
     cancelBooking(bookingId: ID!):Event!
-    loggin(email: String!, password: String!): AuthData!
+   
 }
 
 schema {
